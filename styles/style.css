@@ -229,6 +229,11 @@ ol {
   color: #FFF;
 }
 
+/*добавила у текущего выбранного видео из списка стиль активного состояния*/
+.content__card-link_current {
+  background: #545050;
+}
+
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -244,9 +249,11 @@ ol {
   background-color: #545050;
 }
   
+/*добавила свойство text-decoration-thickness для уравновешивания толщины подчеркивания, т.к. у заголовка и текста разное начертание*/
 .content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
   
 .content__card-link:focus {
@@ -266,14 +273,15 @@ ol {
   max-width: 200px;
 }
 
-/*добавила многоточие при переполнении блока*/
+/*добавила многоточие при переполнении блока; 
+был задана margin-bottom и при использовании text-underline-offset: 6px;(использую, чтобы был отступ подчеркивания и оно не прерывалось на выступающих частях букв) в состоянии hover не отображалось подчеркивание, поэтому заменида на padding-botom */
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  padding-bottom: 6px;
   overflow: hidden;
   text-overflow: ellipsis; 
   white-space: nowrap;
